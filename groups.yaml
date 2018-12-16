@@ -44,7 +44,6 @@ all_lights_group:
     - light.kitchen_window
     - light.kitchen_counter_shelf
     - light.kitchen_counter_window
-    - light.kitchen_table_fan
     - light.office_window
     - light.rio_window
     - light.kitchen_table_shelf
