@@ -1,8 +1,19 @@
-- alias: Kitchen motion on
-  trigger:
+###########################################################
+#                                                         #
+#     (DAY)                                               #
+#     Kitchen motion sensor -> ON                         #
+#                                                         #
+###########################################################
+- trigger:
     - platform: state
       entity_id: binary_sensor.motion_kitchen
-      to: "on"
+      to: 'on'
+
+  condition:
+    - condition: time
+      after: 06:30
+      before: '22:30'
+
   action:
     - service: timer.cancel
       data:
@@ -12,19 +23,91 @@
         brightness_pct: 70
         entity_id: light.deconz_kitchen_ceiling_fitting
 
-- alias: Kitchen motion off
-  trigger:
+
+###########################################################
+#                                                         #
+#     (DAY)                                               #
+#     Kitchen motion sensor -> OFF                        #
+#                                                         #
+###########################################################
+- trigger:
     - platform: state
       entity_id: binary_sensor.motion_kitchen
-      to: "off"
+      to: 'off'
+
+  condition:
+    - condition: time
+      after: 06:30
+      before: '22:30'
+
   action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.kitchen_timer
     - service: timer.start
       data:
         entity_id: timer.kitchen_timer
-        duration: "00:05:00"
+        duration: '00:05:00'
 
-- alias: Kitchen timer finished
-  trigger:
+
+###########################################################
+#                                                         #
+#     (NIGHT)                                             #
+#     Kitchen motion sensor -> ON                         #
+#                                                         #
+###########################################################
+- trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_kitchen
+      to: 'on'
+
+  condition:
+    - condition: time
+      after: '22:30'
+      before: 06:30
+
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.kitchen_timer
+    - service: light.turn_on
+      data:
+        brightness_pct: 10
+        entity_id: light.deconz_kitchen_ceiling_fitting
+
+
+###########################################################
+#                                                         #
+#     (NIGHT)                                             #
+#     Kitchen motion sensor -> OFF                        #
+#                                                         #
+###########################################################
+- trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_kitchen
+      to: 'off'
+
+  condition:
+    - condition: time
+      after: '22:30'
+      before: 06:30
+
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.kitchen_timer
+    - service: timer.start
+      data:
+        entity_id: timer.kitchen_timer
+        duration: '00:01:00'
+
+
+###########################################################
+#                                                         #
+#    Kitchen timer -> FINISHED                            #
+#                                                         #
+###########################################################
+- trigger:
     platform: event
     event_type: timer.finished
     event_data:

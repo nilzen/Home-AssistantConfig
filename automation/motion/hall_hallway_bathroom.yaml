@@ -1,5 +1,11 @@
-- alias: Hall and hallway bathroom lights on - day - motion
-  trigger:
+###########################################################
+#                                                         #
+#    (DAY)                                                #
+#    Hallway bathroom motion sensor -> ON                 #
+#    Front door (inner) opening -> ON                     #
+#                                                         #
+###########################################################
+- trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
       to: 'on'
@@ -19,13 +25,43 @@
         entity_id:
           - light.deconz_hallway_bathroom_ceiling_fittings
           - light.deconz_hall_ceiling_fittings
+
+
+###########################################################
+#                                                         #
+#    (DAY)                                                #
+#    Hallway bathroom motion sensor -> OFF                #
+#    Front door (inner) opening -> OFF                    #
+#                                                         #
+###########################################################
+- trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
+      to: 'off'
+
+  condition:
+    - condition: time
+      after: 06:30
+      before: '21:00'
+
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.hall_hallway_bathroom_timer
     - service: timer.start
       data:
         entity_id: timer.hall_hallway_bathroom_timer
         duration: '00:05:00'
 
-- alias: Hall and hallway bathroom lights on - night - motion
-  trigger:
+
+###########################################################
+#                                                         #
+#    (NIGHT)                                              #
+#    Hallway bathroom motion sensor -> ON                 #
+#    Front door (inner) opening -> ON                     #
+#                                                         #
+###########################################################
+- trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
       to: 'on'
@@ -45,13 +81,41 @@
         entity_id:
           - light.deconz_hallway_bathroom_ceiling_fittings
           - light.deconz_hall_ceiling_fittings
+
+
+###########################################################
+#                                                         #
+#    (NIGHT)                                              #
+#    Hallway bathroom motion sensor -> OFF                #
+#    Front door (inner) opening -> OFF                    #
+#                                                         #
+###########################################################
+- trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
+      to: 'off'
+
+  condition:
+    - condition: time
+      after: '21:00'
+      before: 06:30
+
+  action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.hall_hallway_bathroom_timer
     - service: timer.start
       data:
         entity_id: timer.hall_hallway_bathroom_timer
         duration: '00:01:00'
 
-- alias: Hall and hallway bathroom timer finished
-  trigger:
+
+###########################################################
+#                                                         #
+#    Hall/Hallway bathroom timer -> FINISHED              #
+#                                                         #
+###########################################################
+- trigger:
     platform: event
     event_type: timer.finished
     event_data:
