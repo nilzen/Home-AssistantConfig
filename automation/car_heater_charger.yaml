@@ -5,9 +5,9 @@
     to: 'on'
 
   action:
-  - service: homeassistant.turn_off
-    data:
-      entity_id: switch.car_charger
+    - service: homeassistant.turn_off
+      data:
+        entity_id: switch.car_charger
 
 - alias: Turn on car charger when car heater turns off
   trigger:
@@ -16,9 +16,9 @@
     to: 'off'
 
   action:
-  - service: homeassistant.turn_on
-    data:
-      entity_id: switch.car_charger
+    - service: homeassistant.turn_on
+      data:
+        entity_id: switch.car_charger
 
 - alias: Turn off car heater after N minutes
   trigger:
@@ -29,6 +29,6 @@
       minutes: '120'
 
   action:
-  - service: homeassistant.turn_off
-    data:
-      entity_id: switch.car_heater
+    - service: homeassistant.turn_off
+      data:
+        entity_id: switch.car_heater

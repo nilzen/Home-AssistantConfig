@@ -13,9 +13,9 @@
     - sun
 
   action:
-  - service: homeassistant.turn_off
-    data:
-      entity_id: group.all_lights_group
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.all_lights_group
 
 - alias: Turn off all lights weekend
   trigger:
@@ -27,7 +27,8 @@
     weekday:
     - fri
     - sat
+
   action:
-  - service: homeassistant.turn_off
-    data:
-      entity_id: group.all_lights_group
+    - service: homeassistant.turn_off
+      data:
+        entity_id: group.all_lights_group

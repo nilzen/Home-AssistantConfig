@@ -5,10 +5,10 @@
     to: playing
 
   action:
-  - service: media_player.turn_on
-    data:
-      entity_id: media_player.marantz
-  - service: media_player.select_source
-    data:
-      entity_id: media_player.marantz
-      source: CAST
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.marantz
+    - service: media_player.select_source
+      data:
+        entity_id: media_player.marantz
+        source: CAST

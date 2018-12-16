@@ -1,21 +1,28 @@
 - alias: Dressingroom lights on - motion
   trigger:
-  - platform: state
-    entity_id: binary_sensor.motion_hall
-    to: 'on'
+    - platform: state
+      entity_id: binary_sensor.motion_hall
+      to: 'on'
+
   action:
-  - service: light.turn_on
-    data:
-      brightness_pct: 100
-      entity_id: light.deconz_dressing_room_fitting
-  - service: timer.start
-    data:
-      entity_id: timer.dressing_room_timer
-      duration: '00:05:00'
-  # restart the hall/hallway bathroom timer with current duration
-  - service: timer.start
-    data:
-      entity_id: timer.hall_hallway_bathroom_timer
+    - service: timer.cancel
+      data:
+        entity_id: timer.dressing_room_timer
+    - service: timer.cancel
+      data:
+        entity_id: timer.hall_hallway_bathroom_timer
+    - service: light.turn_on
+      data:
+        brightness_pct: 100
+        entity_id: light.deconz_dressing_room_fitting
+    - service: timer.start
+      data:
+        entity_id: timer.dressing_room_timer
+        duration: '00:05:00'
+    # restart the hall/hallway bathroom timer with current duration
+    - service: timer.start
+      data:
+        entity_id: timer.hall_hallway_bathroom_timer
 
 - alias: Dressing room timer finished
   trigger:
@@ -25,6 +32,6 @@
       entity_id: timer.dressing_room_timer
 
   action:
-  - service: light.turn_off
-    data:
-      entity_id: light.deconz_dressing_room_fitting
+    - service: light.turn_off
+      data:
+        entity_id: light.deconz_dressing_room_fitting

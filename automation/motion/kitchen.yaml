@@ -4,6 +4,9 @@
       entity_id: binary_sensor.motion_kitchen
       to: "on"
   action:
+    - service: timer.cancel
+      data:
+        entity_id: timer.kitchen_timer
     - service: light.turn_on
       data:
         brightness_pct: 70
