@@ -1,0 +1,59 @@
+- alias: Hall and hallway bathroom lights on - day - motion
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
+      to: 'on'
+
+  condition:
+    - condition: time
+      after: 06:30
+      before: '21:00'
+
+  action:
+    - service: light.turn_on
+      data:
+        brightness_pct: 100
+        entity_id:
+          - light.deconz_hallway_bathroom_ceiling_fittings
+          - light.deconz_hall_ceiling_fittings
+    - service: timer.start
+      data:
+        entity_id: timer.hall_hallway_bathroom_timer
+        duration: '00:05:00'
+
+- alias: Hall and hallway bathroom lights on - night - motion
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
+    to: 'on'
+
+  condition:
+  - condition: time
+    after: '21:00'
+    before: 06:30
+
+  action:
+    - service: light.turn_on
+      data:
+        brightness_pct: 10
+        entity_id:
+          - light.deconz_hallway_bathroom_ceiling_fittings
+          - light.deconz_hall_ceiling_fittings
+    - service: timer.start
+      data:
+        entity_id: timer.hall_hallway_bathroom_timer
+        duration: '00:01:00'
+
+- alias: Hall and hallway bathroom timer finished
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.hall_hallway_bathroom_timer
+
+  action:
+  - service: light.turn_off
+    data:
+      entity_id:
+        - light.deconz_hallway_bathroom_ceiling_fittings
+        - light.deconz_hall_ceiling_fittings

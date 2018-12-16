@@ -1,0 +1,33 @@
+- alias: Turn off all lights work days
+  trigger:
+    platform: time
+    at: '22:30:00'
+
+  condition:
+    condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - sun
+
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.all_lights_group
+
+- alias: Turn off all lights weekend
+  trigger:
+    platform: time
+    at: '23:30:00'
+
+  condition:
+    condition: time
+    weekday:
+    - fri
+    - sat
+  action:
+  - service: homeassistant.turn_off
+    data:
+      entity_id: group.all_lights_group

@@ -1,0 +1,16 @@
+host: influxdb
+port: 8086
+database: homeassistant
+username: homeassistant
+password: homeassistant
+max_retries: 3
+default_measurement: state
+include:
+  entities:
+      - sensor.outdoor_north_temperature
+      - sensor.kitchen_temperature
+      - sensor.freezer_garage_temperature
+      - sensor.freezer_kitchen_left_temperature
+      - sensor.freezer_kitchen_right_temperature
+      - sensor.cooler_kitchen_left_temperature
+      - sensor.cooler_kitchen_right_temperature

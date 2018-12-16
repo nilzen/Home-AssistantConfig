@@ -1,0 +1,11 @@
+.storage
+.google.token
+.uuid
+.ios.conf
+.DS_Store
+home-assistant.log
+home-assistant_v2.db
+tts
+secrets.yaml
+known_devices.yaml
+phue.conf

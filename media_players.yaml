@@ -1,0 +1,4 @@
+- platform: denonavr
+  host: !secret mediaplayer_marantz
+  name: Marantz
+  show_all_sources: True

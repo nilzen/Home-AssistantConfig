@@ -1,0 +1,8 @@
+- alias: Turn off bedrooms at bedtime
+  trigger:
+    platform: time
+    at: '20:00:00'
+
+  action:
+  - service: homeassistant.turn_off
+    entity_id: light.mira_shelf, light.mira_aquarium, light.mira_window, light.master_bedroom_window

@@ -1,0 +1,10 @@
+- platform: rfxtrx
+  automatic_add: False
+  signal_repetitions: 2
+  devices:
+    0b1100051e8678fe01010f70:
+      name: car_heater
+    0b11000567bc0cfe09010f70:
+      name: car_charger
+    0b11000542bc0cfe01010f70:
+      name: kitchen_table_fan

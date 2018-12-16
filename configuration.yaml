@@ -1,0 +1,62 @@
+homeassistant:
+  name: !secret home_name
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: Europe/Stockholm
+  customize: !include customize.yaml
+
+frontend:
+
+config:
+
+ios:
+
+http:
+  base_url: !secret base_url
+  use_x_forwarded_for: True
+  trusted_proxies: !secret trusted_proxies
+
+updater:
+
+conversation:
+
+history:
+
+logbook:
+
+recorder:
+  purge_interval: 2
+  purge_keep_days: 5
+
+logger:
+  default: warning
+
+sun:
+
+tts:
+  - platform: google
+    cache: false
+    base_url: !secret tts_base_url
+
+rfxtrx:
+  device: /dev/ttyUSB-RFXCOM
+
+google:
+  client_id: !secret google_calendar_client_id
+  client_secret: !secret google_calendar_client_secret
+  track_new_calendar: False
+
+google_assistant: !include google_assistant.yaml
+switch: !include switches.yaml
+light: !include lights.yaml
+media_player: !include media_players.yaml
+sensor: !include sensors.yaml
+influxdb: !include influxdb.yaml
+group: !include groups.yaml
+automation: !include_dir_merge_list automation
+cast: !include cast.yaml
+notify: !include notify.yaml
+script: !include scripts.yaml
+timer: !include timer.yaml

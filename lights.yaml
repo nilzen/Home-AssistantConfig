@@ -1,0 +1,32 @@
+- platform: rfxtrx
+  automatic_add: False
+  signal_repetitions: 2
+  devices:
+    0b11000530bc0cfe03010f70:
+      name: kitchen_window
+    0b11000530bc0cfe02010f70:
+      name: kitchen_counter_shelf
+    0b11000530bc0cfe05010f70:
+      name: kitchen_counter_window
+    0b11000503bc0cfe01010f70:
+      name: office_window
+    0b1100051a8678fe07010f70:
+      name: mira_window
+    0b11000577bc0cfe02010f70:
+      name: kitchen_table_shelf
+    0b11000577bc0cfe03010f70:
+      name: sofa_aquarium
+    0b11000564bc0cfe09010f70:
+      name: master_bedroom_window
+    0b11000532bc0cfe06010f70:
+      name: rio_window
+    0b11000504bc0cfe01010f70:
+      name: rio_aquarium
+    0b1100051e8678fe03010f70:
+      name: dressing_room_window
+    0b11000505bc0cfe01010f70:
+      name: kitchen_table_cabinet
+    0b11000552bc0cfe02010f70:
+      name: hall_window
+    0b1100051f8678fe09010f70:
+      name: hallway_shelf

@@ -1,0 +1,26 @@
+- alias: Kitchen lights on - motion
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.motion_kitchen
+      to: "on"
+  action:
+    - service: light.turn_on
+      data:
+        brightness_pct: 70
+        entity_id: light.deconz_kitchen_ceiling_fitting
+    - service: timer.start
+      data:
+        entity_id: timer.kitchen_timer
+        duration: "00:05:00"
+
+- alias: Kitchen timer finished
+  trigger:
+    platform: event
+    event_type: timer.finished
+    event_data:
+      entity_id: timer.kitchen_timer
+
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.deconz_kitchen_ceiling_fitting

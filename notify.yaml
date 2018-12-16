@@ -1,0 +1,11 @@
+- name: ALL_PHONES
+  platform: group
+  services:
+    - service: ios_olov
+    - service: ios_carina
+    - service: ios_mira
+- name: OLOV_CARINA
+  platform: group
+  services:
+    - service: ios_olov
+    - service: ios_carina

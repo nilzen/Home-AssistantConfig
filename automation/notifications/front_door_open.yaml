@@ -1,0 +1,11 @@
+- alias: Send notification when door has been open for >20 sec
+  trigger:
+  - platform: state
+    entity_id: binary_sensor.opening_front_door_inner
+    to: 'on'
+    for: 0:00:20
+
+  action:
+  - service: notify.olov_carina
+    data:
+      message: Ytterdörren står öppen

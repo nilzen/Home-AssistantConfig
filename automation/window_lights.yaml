@@ -1,0 +1,10 @@
+- alias: Turn on window lights at sunset
+  trigger:
+    platform: sun
+    event: sunset
+    offset: -00:45:00
+
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: group.window_lights

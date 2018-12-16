@@ -1,0 +1,30 @@
+- platform: speedtest
+  hour:
+    - 0
+    - 4
+    - 8
+    - 12
+    - 16
+    - 20
+  monitored_conditions:
+    - ping
+    - download
+    - upload
+- platform: yr
+- platform: rfxtrx
+  automatic_add: False
+  devices:
+    08500701f10000e079:
+      name: kitchen
+    0850079bd400009759:
+      name: outdoor_north
+    0a520d85a20300ee350179:
+      name: freezer_garage
+    0a520dd4c70100ce320169:
+      name: freezer_kitchen_left
+    0a520d0b8e0100d1320159:
+      name: freezer_kitchen_right
+    0a520d30dd0100d1320169:
+      name: cooler_kitchen_left
+    0a520d56f40100d3310159:
+      name: cooler_kitchen_right

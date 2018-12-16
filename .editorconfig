@@ -1,0 +1,20 @@
+root = true
+
+[*]
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+ident_size = 4
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[*.toml]
+ident_size = 2
+
+[*.css]
+ident_size = 2
+
+[{.gitignore,.gitkeep,.gitattributes,.editorconfig}]
+ident_size = 2

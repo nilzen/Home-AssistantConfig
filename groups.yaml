@@ -1,0 +1,97 @@
+default_view:
+  name: Start
+  view: yes
+  entities:
+    - group.kitchen
+    - sensor.kitchen_temperature
+    - sensor.outdoor_north_temperature
+    - group.common_outdoor
+
+all_lights_view:
+  name: Alla lampor
+  view: yes
+  entities:
+    - group.all_lights_group
+
+sensors_view:
+  name: Sensorer
+  view: yes
+  entities:
+    - group.speedtest
+
+speedtest:
+  name: Speedtest
+  view: no
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+
+all_lights_group:
+  name: Alla lampor
+  view: no
+  entities:
+    - light.deconz_kitchen_table
+    - light.deconz_living_room_window
+    - light.living_room_shelf
+    - light.kitchen_island
+    - light.living_room_window_ledge
+    - light.deconz_dressing_room_fitting
+    - light.deconz_hall_ceiling_fittings
+    - light.deconz_hallway_bathroom_ceiling_fittings
+    - light.deconz_hallway_master_bedroom_ceiling_fitting
+    - light.deconz_kitchen_ceiling_fitting
+    - light.kitchen_window
+    - light.kitchen_counter_shelf
+    - light.kitchen_counter_window
+    - light.kitchen_table_fan
+    - light.office_window
+    - light.rio_window
+    - light.kitchen_table_shelf
+    - light.sofa_aquarium
+    - light.master_bedroom_window
+    - light.mira_window
+    - light.rio_aquarium
+    - light.dressing_room_window
+    - light.deconz_kitchen_table_window
+    - light.kitchen_table_cabinet
+    - light.hall_window
+    - light.hallway_shelf
+
+kitchen:
+  name: Kök
+  view: no
+  control: hidden
+  entities:
+    - light.deconz_kitchen_table
+    - switch.kitchen_table_fan
+
+common_outdoor:
+  name: Utomhus
+  view: no
+  control: hidden
+  entities:
+    - switch.car_heater
+    - switch.car_charger
+
+aquarium_lights:
+  name: Akvarium
+  view: no
+  entities:
+    - light.sofa_aquarium
+    - light.rio_aquarium
+
+window_lights:
+  name: Fönsterbelysning
+  view: no
+  entities:
+    - light.kitchen_window
+    - light.kitchen_counter_window
+    - light.office_window
+    - light.rio_window
+    - light.master_bedroom_window
+    - light.mira_window
+    - light.dressing_room_window
+    - light.deconz_kitchen_table_window
+    - light.hall_window
+    - light.deconz_living_room_window

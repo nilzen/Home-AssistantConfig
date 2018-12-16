@@ -1,0 +1,10 @@
+
+- alias: Turn on aquariums
+  trigger:
+    platform: time
+    at: 07:00:00
+
+  action:
+  - service: homeassistant.turn_on
+    data:
+      entity_id: group.aquarium_lights

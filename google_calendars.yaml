@@ -1,0 +1,24 @@
+
+- cal_id: nilzen.se_0irecrrbffilpgig3kln96l3oc@group.calendar.google.com
+  entities:
+  - device_id: familjen
+    name: Familjen
+    track: true
+  - device_id: carina_work
+    name: Carina jobbar
+    track: true
+    search: "Carina jobbar"
+
+- cal_id: nilzen.se_39i8ghrnqeh3hqvt4577e8rqdo@group.calendar.google.com
+  entities:
+  - device_id: skolschema
+    ignore_availability: true
+    name: Skolschema
+    track: false
+
+- cal_id: olov@nilzen.se
+  entities:
+  - device_id: olov_nilzen
+    ignore_availability: true
+    name: "Olov Nilz\xE9n"
+    track: false

@@ -1,0 +1,116 @@
+project_id: !secret google_assistant_project_id
+api_key: !secret google_assistant_api_key
+exposed_domains:
+  - switch
+  - light
+  - group
+entity_config:
+  light.deconz_living_room_window:
+    name: Fönster
+    room: Vardagsrum
+  light.living_room_window_ledge:
+    name: Fönsterbänk
+    room: Vardagsrum
+  light.living_room_shelf:
+    name: Hylla
+    room: Vardagsrum
+  light.dressing_room_window:
+    name: Fönster
+    room: Dressingroom
+  light.hallway_shelf:
+    name: Hylla
+    room: Hall
+  light.hall_window:
+    name: Fönster
+    room: Kallfarstu
+  light.hue_white_lamp_1:
+    expose: false
+  light.hue_white_lamp_2:
+    expose: false
+  light.kok:
+    expose: false
+  light.kitchen_window:
+    name: Fönster
+    room: Kök
+  light.deconz_kitchen_table:
+    name: Köksbord
+    room: Kök
+  light.kitchen_counter_shelf:
+    name: Köksbänk hylla
+    room: Kök
+  light.kitchen_counter_window:
+    name: Köksbänk fönster
+    room: Kök
+  switch.kitchen_table_fan:
+    name: Fläkt
+    room: Kök
+  light.kitchen_island:
+    name: Köksö
+    room: Kök
+  light.deconz_kitchen_table_window:
+    name: Köksbord fönster
+    room: Kök
+  light.kitchen_table_shelf:
+    name: Köksbord hylla
+    room: Kök
+  light.kitchen_table_cabinet:
+    name: Köksbord skåp
+    room: Kök
+  light.sofa_aquarium:
+    name: Akvarium
+    room: Vardagsrum
+  light.mira_window:
+    name: Fönster
+    room: Mira
+  light.rio_aquarium:
+    name: Akvarium
+    room: Rio
+  light.rio_window:
+    name: Fönster
+    room: Rio
+  light.office_window:
+    name: Fönster
+    room: Kontor
+  light.master_bedroom_window:
+    name: Fönster
+    room: Sovrum
+  light.vardagsrum:
+    expose: false
+  light.vardagsrum_fonster_1:
+    expose: false
+  light.vardagsrum_fonster_2:
+    expose: false
+  light.vardagsrum_fonster_3:
+    expose: false
+  light.vardagsrum_fonster_4:
+    expose: false
+  switch.car_heater:
+    name: Motorvärmare
+    room: Utomhus
+  switch.car_charger:
+    name: Billaddare
+    room: Utomhus
+  group.all_automations:
+    expose: false
+  group.all_devices:
+    expose: false
+  group.all_switches:
+    expose: false
+  group.all_scripts:
+    expose: false
+  group.aquarium_lights:
+    expose: false
+  group.all_lights:
+    expose: false
+  group.calendar:
+    expose: false
+  group.common_outdoor:
+    expose: false
+  group.kitchen:
+    expose: false
+  group.speedtest:
+    expose: false
+  group.all_lights_group:
+    expose: false
+  group.window_lights:
+    expose: false
