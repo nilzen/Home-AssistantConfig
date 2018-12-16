@@ -28,3 +28,8 @@
       name: cooler_kitchen_left
     0a520d56f40100d3310159:
       name: cooler_kitchen_right
+- platform: travisci
+  api_key: !secret travisci_api_key
+  monitored_conditions:
+    - last_build_state
+  repository: Home-AssistantConfig

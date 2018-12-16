@@ -4,7 +4,8 @@
 #     Hallway master bedroom motion sensor -> ON          #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_master_bedroom_on_day
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_master_bedroom
       to: 'on'
@@ -30,7 +31,8 @@
 #     Hallway master bedroom motion sensor -> OFF         #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_master_bedroom_off_day
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_master_bedroom
       to: 'off'
@@ -56,7 +58,8 @@
 #     Hallway master bedroom motion sensor -> ON          #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_master_bedroom_on_night
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_master_bedroom
       to: 'on'
@@ -82,7 +85,8 @@
 #     Hallway master bedroom motion sensor -> OFF         #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_master_bedroom_off_night
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_master_bedroom
       to: 'off'
@@ -107,7 +111,8 @@
 #    Master bedroom timer -> FINISHED                     #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: hallway_master_bedroom_timer_finished
+  trigger:
     platform: event
     event_type: timer.finished
     event_data:

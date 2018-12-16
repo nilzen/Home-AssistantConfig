@@ -3,7 +3,8 @@
 #    Hall motion sensor -> OFF                            #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hall_on
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hall
       to: 'on'
@@ -23,7 +24,8 @@
 #    Hall motion sensor -> OFF                            #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hall_off
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hall
       to: 'off'
@@ -43,7 +45,8 @@
 #    Dressing room timer -> FINISHED                      #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: dressing_room_timer_finished
+  trigger:
     platform: event
     event_type: timer.finished
     event_data:

@@ -5,7 +5,8 @@
 #    Front door (inner) opening -> ON                     #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_bathroom_or_opening_front_door_inner_on_day
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
       to: 'on'
@@ -34,7 +35,8 @@
 #    Front door (inner) opening -> OFF                    #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_bathroom_or_opening_front_door_inner_off_day
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
       to: 'off'
@@ -61,7 +63,8 @@
 #    Front door (inner) opening -> ON                     #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_bathroom_or_opening_front_door_inner_on_night
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
       to: 'on'
@@ -90,7 +93,8 @@
 #    Front door (inner) opening -> OFF                    #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_hallway_bathroom_or_opening_front_door_inner_off_night
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_hallway_bathroom, binary_sensor.opening_front_door_inner
       to: 'off'
@@ -115,7 +119,8 @@
 #    Hall/Hallway bathroom timer -> FINISHED              #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: hall_hallway_bathroom_timer_finished
+  trigger:
     platform: event
     event_type: timer.finished
     event_data:

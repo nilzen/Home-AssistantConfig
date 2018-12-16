@@ -1,0 +1,15 @@
+###########################################################
+#                                                         #
+#    TravisCI build sensor -> passed                      #
+#                                                         #
+###########################################################
+- alias: pull_config_from_github_on_successful_build
+  trigger:
+    - platform: state
+      entity_id: sensor.nilzenhomeassistantconfig_last_build_state
+      to: 'passed'
+
+  action:
+    - service: shell_command.git_pull
+    - delay: 00:00:30
+    - service: homeassistant.restart

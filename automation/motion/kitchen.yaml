@@ -4,7 +4,8 @@
 #     Kitchen motion sensor -> ON                         #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_kitchen_on_day
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_kitchen
       to: 'on'
@@ -30,7 +31,8 @@
 #     Kitchen motion sensor -> OFF                        #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_kitchen_off_day
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_kitchen
       to: 'off'
@@ -56,7 +58,8 @@
 #     Kitchen motion sensor -> ON                         #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_kitchen_on_night
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_kitchen
       to: 'on'
@@ -82,7 +85,8 @@
 #     Kitchen motion sensor -> OFF                        #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: motion_kitchen_off_night
+  trigger:
     - platform: state
       entity_id: binary_sensor.motion_kitchen
       to: 'off'
@@ -107,7 +111,8 @@
 #    Kitchen timer -> FINISHED                            #
 #                                                         #
 ###########################################################
-- trigger:
+- alias: kitchen_timer_finished
+  trigger:
     platform: event
     event_type: timer.finished
     event_data:
