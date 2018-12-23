@@ -51,6 +51,11 @@ google:
 shell_command:
   git_pull: bash ./git_pull.sh
 
+vacuum:
+  - platform: xiaomi_miio
+    host: !secret xiaomi_miio_ip
+    token: !secret xiaomi_miio_token
+
 google_assistant: !include google_assistant.yaml
 switch: !include switches.yaml
 light: !include lights.yaml
