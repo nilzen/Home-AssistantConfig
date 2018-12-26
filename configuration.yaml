@@ -68,3 +68,4 @@ cast: !include cast.yaml
 notify: !include notify.yaml
 script: !include scripts.yaml
 timer: !include timer.yaml
+input_boolean: !include input_boolean.yaml

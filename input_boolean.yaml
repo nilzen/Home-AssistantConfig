@@ -1,0 +1,4 @@
+vacuum_cleaned_today:
+  name: 'Vacuum cleaned today'
+  initial: off
+  icon: mdi:broom

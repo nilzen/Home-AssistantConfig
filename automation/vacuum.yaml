@@ -1,0 +1,76 @@
+###########################################################
+#                                                         #
+#    Vacuum at 10:00                                      #
+#                                                         #
+###########################################################
+- alias: vacuum_at_10
+  trigger:
+    platform: time
+    at: '10:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: time
+        weekday:
+          - mon
+          - wed
+          - fri
+      - condition: state
+        entity_id: input_boolean.vacuum_cleaned_today
+        state: 'off'
+  action:
+    - service: vacuum.start
+      entity_id: vacuum.xiaomi_vacuum_cleaner
+
+
+###########################################################
+#                                                         #
+#    Vacuum error                                         #
+#                                                         #
+###########################################################
+- alias: vacuum_completed
+  trigger:
+    platform: state
+    entity_id: vacuum.xiaomi_vacuum_cleaner
+    to: 'error'
+  action:
+    - service: notify.olov_carina
+      data:
+        title: Gorbi
+        message: 'Error! Kom och hjälp mig.'
+
+
+###########################################################
+#                                                         #
+#    Vacuum completed                                     #
+#                                                         #
+###########################################################
+- alias: vacuum_completed
+  trigger:
+    platform: state
+    entity_id: vacuum.xiaomi_vacuum_cleaner
+    from: 'returning'
+    to: 'docked'
+  action:
+    - service: notify.olov_carina
+      data:
+        title: Gorbi
+        message: 'Nu har jag städat klart! Det tog {{states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time}} minuter.'
+    - service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.vacuum_cleaned_today
+
+
+###########################################################
+#                                                         #
+#    Reset vacuum_cleaned_today input_boolean             #
+#                                                         #
+###########################################################
+- alias: reset_vacuum_cleaned_today
+  trigger:
+    platform: time
+    at: '01:00:00'
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.vacuum_cleaned_today
