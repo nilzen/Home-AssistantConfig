@@ -9,3 +9,7 @@
   services:
     - service: ios_olov
     - service: ios_carina
+- name: OLOV
+  platform: group
+  services:
+    - service: ios_olov
