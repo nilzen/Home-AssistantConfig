@@ -1,0 +1,12 @@
+###########################################################
+#                                                         #
+#    Turn on switches at HASS startup                     #
+#                                                         #
+###########################################################
+- alias: hass_startup
+  trigger:
+   - platform: homeassistant
+     event: start
+  action:
+  - service: switch.turn_on
+    entity_id: switch.car_charger
