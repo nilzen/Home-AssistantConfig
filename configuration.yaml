@@ -32,6 +32,9 @@ recorder:
 
 logger:
   default: warning
+  # logs:
+  #   pydeconz: debug
+  #   homeassistant.components.deconz: debug
 
 sun:
 

@@ -1,0 +1,18 @@
+###########################################################
+#                                                         #
+#    Mira button bed short press                        #
+#                                                         #
+###########################################################
+- alias: button_bed_mira_short_press
+
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: button_bed_mira
+      event: 1002
+
+  action:
+    - service: homeassistant.toggle
+      data:
+        entity_id: light.mira_window

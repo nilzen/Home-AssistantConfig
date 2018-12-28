@@ -1,0 +1,18 @@
+###########################################################
+#                                                         #
+#    Button bed Carina short press                        #
+#                                                         #
+###########################################################
+- alias: button_bed_carina_short_press
+
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: button_bed_carina
+      event: 1002
+
+  action:
+    - service: homeassistant.turn_on
+      data:
+        entity_id: group.morning_lights
