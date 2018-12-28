@@ -94,3 +94,8 @@ window_lights:
     - light.deconz_kitchen_table_window
     - light.hall_window
     - light.deconz_living_room_window
+
+morning_lights:
+  entities:
+    - light.deconz_kitchen_table
+    - group.window_lights

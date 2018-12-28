@@ -114,3 +114,9 @@ entity_config:
     expose: false
   group.window_lights:
     expose: false
+
+  group.morning_lights:
+    name: Morgonbelysning
+    aliases:
+      - Morgonbelysningen
+      - Morgonlamporna
