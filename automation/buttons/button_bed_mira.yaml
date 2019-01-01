@@ -15,4 +15,6 @@
   action:
     - service: homeassistant.toggle
       data:
-        entity_id: light.mira_window
+        entity_id:
+          - light.mira_window
+          - group.mira_wall_lights

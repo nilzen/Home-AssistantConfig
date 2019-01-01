@@ -10,6 +10,10 @@
       name: office_window
     0b1100051a8678fe07010f70:
       name: mira_window
+    0b11000530bc0cfe05010f70:
+      name: mira_tv
+    0b11000564bc0cfe09010f70:
+      name: mira_bed
     0b11000577bc0cfe02010f70:
       name: kitchen_table_shelf
     0b11000577bc0cfe03010f70:
@@ -59,8 +63,3 @@
 #    Unused 433 switches, marked with name                #
 #                                                         #
 ###########################################################
-
-# 0b11000564bc0cfe09010f70:
-#   name: master_bedroom_window
-# 0b11000530bc0cfe05010f70:
-#   name: kitchen_counter_window

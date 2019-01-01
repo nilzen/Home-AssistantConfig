@@ -99,3 +99,8 @@ morning_lights:
   entities:
     - light.deconz_kitchen_table
     - group.window_lights
+
+mira_wall_lights:
+  entities:
+    - light.mira_tv
+    - light.mira_bed
