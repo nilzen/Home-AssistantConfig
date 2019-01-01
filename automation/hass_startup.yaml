@@ -1,12 +1,28 @@
 ###########################################################
 #                                                         #
-#    Turn on switches at HASS startup                     #
+#    Turn on car charger at HASS startup                  #
 #                                                         #
 ###########################################################
-- alias: hass_startup
+- alias: "Turn on car charger at HASS Startup"
   trigger:
    - platform: homeassistant
      event: start
   action:
   - service: switch.turn_on
     entity_id: switch.car_charger
+
+
+###########################################################
+#                                                         #
+#    Sync MQTT state at HASS startup                     #
+#                                                         #
+###########################################################
+- alias: "Sync MQTT state at HASS startup"
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: mqtt.publish
+      data:
+        topic: "sonoffs/cmnd/state"
+        payload: ""

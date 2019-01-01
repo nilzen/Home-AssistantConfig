@@ -30,6 +30,12 @@ recorder:
   purge_interval: 2
   purge_keep_days: 5
 
+mqtt:
+  broker: !secret mqtt_host
+  client_id: !secret mqtt_client_id
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+
 logger:
   default: warning
   # logs:
