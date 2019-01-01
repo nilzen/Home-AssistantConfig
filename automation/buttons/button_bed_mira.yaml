@@ -1,6 +1,6 @@
 ###########################################################
 #                                                         #
-#    Mira button bed short press                        #
+#    Mira button bed short press                          #
 #                                                         #
 ###########################################################
 - alias: button_bed_mira_short_press
