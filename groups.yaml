@@ -56,6 +56,7 @@ all_lights_group:
     - light.kitchen_table_cabinet
     - light.hall_window
     - light.hallway_shelf
+    - light.hall_bathroom_floor
 
 kitchen:
   name: Kök

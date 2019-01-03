@@ -48,6 +48,8 @@ light.hall_window:
   friendly_name: Kallfarstu - Fönster
 light.hallway_shelf:
   friendly_name: Hall - Hylla
+light.hall_bathroom_floor:
+  friendly_name: Hall badrum - golvlampa
 switch.car_heater:
   friendly_name: Motorvärmare
 switch.car_charger:
@@ -58,6 +60,12 @@ sensor.kitchen_temperature:
   friendly_name: Kök
 sensor.outdoor_north_temperature:
   friendly_name: Utomhus
+sensor.temperature_garage_freezer:
+  friendly_name: Frys garage
+sensor.freezer_kitchen_left_temperature:
+  friendly_name: Frys kök vänster
+sensor.freezer_kitchen_right_temperature:
+  friendly_name: Frys kök höger
 light.hue_white_lamp_1:
   hidden: true
 light.hue_white_lamp_2:

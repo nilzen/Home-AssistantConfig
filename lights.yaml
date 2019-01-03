@@ -30,6 +30,8 @@
       name: hall_window
     0b1100051f8678fe09010f70:
       name: hallway_shelf
+    0b110005258678fe09010f70:
+      name: hall_bathroom_floor
 
 - platform: mqtt
   name: master_bedroom_window
