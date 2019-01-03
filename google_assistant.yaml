@@ -23,10 +23,6 @@ entity_config:
   light.hall_window:
     name: Fönster
     room: Kallfarstu
-  light.hue_white_lamp_1:
-    expose: false
-  light.hue_white_lamp_2:
-    expose: false
   light.kok:
     expose: false
   light.kitchen_window:

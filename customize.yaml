@@ -66,10 +66,6 @@ sensor.temperature_kitchen_left_freezer:
   friendly_name: Frys kök vänster
 sensor.freezer_kitchen_right_temperature:
   friendly_name: Frys kök höger
-light.hue_white_lamp_1:
-  hidden: true
-light.hue_white_lamp_2:
-  hidden: true
 light.tradfri_bulb_e27_opal_1000lm:
   hidden: true
 light.tradfri_bulb_e27_opal_1000lm_2:
