@@ -62,7 +62,7 @@ sensor.outdoor_north_temperature:
   friendly_name: Utomhus
 sensor.temperature_garage_freezer:
   friendly_name: Frys garage
-sensor.freezer_kitchen_left_temperature:
+sensor.temperature_kitchen_left_freezer:
   friendly_name: Frys kök vänster
 sensor.freezer_kitchen_right_temperature:
   friendly_name: Frys kök höger
