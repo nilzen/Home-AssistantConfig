@@ -8,9 +8,9 @@ default_measurement: state
 include:
   entities:
       - sensor.outdoor_north_temperature
-      - sensor.kitchen_temperature
-      - sensor.freezer_garage_temperature
-      - sensor.freezer_kitchen_left_temperature
-      - sensor.freezer_kitchen_right_temperature
-      - sensor.cooler_kitchen_left_temperature
-      - sensor.cooler_kitchen_right_temperature
+      - sensor.temperature_kitchen
+      - sensor.temperature_freezer_garage
+      - sensor.temperature_freezer_kitchen_left
+      - sensor.temperature_freezer_kitchen_right
+      - sensor.temperature_refrigerator_kitchen_left
+      - sensor.temperature_refrigerator_kitchen_right
