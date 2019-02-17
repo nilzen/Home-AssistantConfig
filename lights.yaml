@@ -59,6 +59,19 @@
   payload_not_available: "Offline"
   retain: false
 
+- platform: mqtt
+  name: mira_makeup_table
+  state_topic: "sonoff-4/tele/STATE"
+  value_template: "{{ value_json.POWER }}"
+  command_topic: "sonoff-4/cmnd/POWER"
+  availability_topic: "sonoff-4/tele/LWT"
+  qos: 1
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"
+  retain: false
+
 
 ###########################################################
 #                                                         #

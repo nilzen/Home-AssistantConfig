@@ -37,6 +37,9 @@ entity_config:
   light.kitchen_counter_window:
     name: Köksbänk fönster
     room: Kök
+  light.mira_makeup_table:
+    name: Sminkbord
+    room: Mira
   switch.kitchen_table_fan:
     name: Fläkt
     room: Kök
