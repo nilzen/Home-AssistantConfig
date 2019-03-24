@@ -34,6 +34,10 @@ light.master_bedroom_window:
   friendly_name: Sovrum - Fönster
 light.mira_window:
   friendly_name: Mira - Fönster
+light.mira_makeup_table:
+  friendly_name: Mira - Sminkbord
+light.mira_bed:
+  friendly_name: Mira - Väggbelysning säng
 light.rio_aquarium:
   friendly_name: Rio - Akvarium
 light.dressing_room_window:

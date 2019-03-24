@@ -22,4 +22,25 @@
       data:
         entity_id:
           - light.mira_window
-          - group.mira_wall_lights
+          - light.mira_makeup_table
+          - light.mira_bed
+
+- alias: button_bed_mira_double_click
+
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: button_bed_mira
+      event: 1004
+
+  action:
+    - service_template: >
+        {% if is_state('light.mira_makeup_table', 'off') %}
+          homeassistant.turn_on
+        {% else %}
+          homeassistant.turn_off
+        {% endif %}
+      data:
+        entity_id:
+          - light.mira_makeup_table

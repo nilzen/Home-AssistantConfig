@@ -61,6 +61,11 @@ entity_config:
   light.mira_window:
     name: Fönster
     room: Mira
+  light.mira_bed:
+    name: Väggbelysning
+    room: Mira
+    aliases:
+      - Sängbelysning
   light.rio_aquarium:
     name: Akvarium
     room: Rio
@@ -73,6 +78,24 @@ entity_config:
   light.master_bedroom_window:
     name: Fönster
     room: Sovrum
+  switch.car_heater:
+    name: Motorvärmare
+    room: Utomhus
+  switch.car_charger:
+    name: Billaddare
+    room: Utomhus
+  light.dressingroom_1:
+    expose: false
+  light.dressingroom_2:
+    expose: false
+  light.dressingroom_3:
+    expose: false
+  light.dressingroom_4:
+    expose: false
+  light.dressingroom_5:
+    expose: false
+  light.dressingroom_6:
+    expose: false
   light.vardagsrum:
     expose: false
   light.vardagsrum_fonster_1:
@@ -83,12 +106,50 @@ entity_config:
     expose: false
   light.vardagsrum_fonster_4:
     expose: false
-  switch.car_heater:
-    name: Motorvärmare
-    room: Utomhus
-  switch.car_charger:
-    name: Billaddare
-    room: Utomhus
+  light.kitchen_1:
+    expose: false
+  light.kitchen_2:
+    expose: false
+  light.kitchen_3:
+    expose: false
+  light.kitchen_4:
+    expose: false
+  light.kitchen_5:
+    expose: false
+  light.kitchen_table_1:
+    expose: false
+  light.kitchen_table_2:
+    expose: false
+  light.hall_1:
+    expose: false
+  light.hall_2:
+    expose: false
+  light.hall_3:
+    expose: false
+  light.hall_4:
+    expose: false
+  light.hall_5:
+    expose: false
+  light.hall_6:
+    expose: false
+  light.hallway_1:
+    expose: false
+  light.hallway_2:
+    expose: false
+  light.hallway_3:
+    expose: false
+  light.hallway_4:
+    expose: false
+  light.hallway_5:
+    expose: false
+  light.hallway_6:
+    expose: false
+  light.hallway_7:
+    expose: false
+  light.hallway_8:
+    expose: false
+  light.hallway_9:
+    expose: false
   group.all_automations:
     expose: false
   group.all_devices:
