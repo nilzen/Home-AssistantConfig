@@ -1,15 +1,3 @@
-- platform: speedtest
-  hour:
-    - 0
-    - 4
-    - 8
-    - 12
-    - 16
-    - 20
-  monitored_conditions:
-    - ping
-    - download
-    - upload
 - platform: yr
 - platform: rfxtrx
   automatic_add: False

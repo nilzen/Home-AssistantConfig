@@ -42,6 +42,8 @@ logger:
   #   pydeconz: debug
   #   homeassistant.components.deconz: debug
 
+speedtestdotnet:
+
 sun:
 
 tts:
