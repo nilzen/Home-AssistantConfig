@@ -1,6 +1,6 @@
 test_push:
   alias: 'test_push'
   sequence:
-    - service: notify.ALL_PHONES
+    - service: notify.default
       data:
         message: 'Testar pushnotiser'

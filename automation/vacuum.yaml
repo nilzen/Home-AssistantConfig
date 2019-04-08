@@ -34,7 +34,7 @@
     entity_id: vacuum.xiaomi_vacuum_cleaner
     to: 'error'
   action:
-    - service: notify.olov_carina
+    - service: notify.default
       data:
         title: Gorbi
         message: 'Error! Kom och hjälp mig.'
@@ -52,7 +52,7 @@
     from: 'returning'
     to: 'docked'
   action:
-    - service: notify.olov_carina
+    - service: notify.default
       data:
         title: Gorbi
         message: 'Nu har jag städat klart! Det tog {{states.vacuum.xiaomi_vacuum_cleaner.attributes.cleaning_time}} minuter.'

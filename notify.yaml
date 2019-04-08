@@ -1,15 +1,13 @@
-- name: ALL_PHONES
+- name: all_phones
   platform: group
   services:
     - service: ios_olov
-    - service: ios_carina
     - service: ios_mira
-- name: OLOV_CARINA
+- name: default
   platform: group
   services:
     - service: ios_olov
-    - service: ios_carina
-- name: OLOV
+- name: olov
   platform: group
   services:
     - service: ios_olov
