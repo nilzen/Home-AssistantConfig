@@ -15,6 +15,7 @@
           - mon
           - wed
           - fri
+          - sat
       - condition: state
         entity_id: input_boolean.vacuum_cleaned_today
         state: 'off'
