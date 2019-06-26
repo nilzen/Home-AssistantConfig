@@ -51,7 +51,7 @@ speedtestdotnet:
 sun:
 
 tts:
-  - platform: google
+  - platform: google_translate
     cache: false
     base_url: !secret tts_base_url
 
