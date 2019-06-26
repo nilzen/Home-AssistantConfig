@@ -43,6 +43,9 @@ logger:
   # logs:
   #   pydeconz: debug
   #   homeassistant.components.deconz: debug
+  # logs:
+  #   rfxtrx: debug
+  #   homeassistant.components.rfxtrx: debug
 
 system_health:
 
