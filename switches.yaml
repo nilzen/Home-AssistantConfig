@@ -8,3 +8,15 @@
       name: car_charger
     0b11000542bc0cfe01010f70:
       name: kitchen_table_fan
+
+- platform: broadlink
+  host: 10.0.60.35
+  mac: 'c8:f7:42:40:a7:62'
+
+- platform: broadlink
+  host: 10.0.60.37
+  mac: 'c8:f7:42:83:77:2a'
+
+- platform: broadlink
+  host: 10.0.60.36
+  mac: 'c8:f7:42:83:6f:03'

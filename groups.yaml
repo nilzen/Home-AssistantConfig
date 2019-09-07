@@ -43,13 +43,13 @@ all_lights_group:
     - light.deconz_kitchen_ceiling_fitting
     - light.kitchen_window
     - light.kitchen_counter_shelf
-    - light.kitchen_counter_window
+    - switch.sonoff_05_relay
     - light.mira_makeup_table
     - light.office_window
     - light.rio_window
     - light.kitchen_table_shelf
     - light.sofa_aquarium
-    - light.master_bedroom_window
+    - switch.sonoff_01_relay
     - light.mira_window
     - light.rio_aquarium
     - light.dressing_room_window
@@ -87,10 +87,10 @@ window_lights:
   view: no
   entities:
     - light.kitchen_window
-    - light.kitchen_counter_window
+    - switch.sonoff_05_relay
     - light.office_window
     - light.rio_window
-    - light.master_bedroom_window
+    - switch.sonoff_01_relay
     - light.mira_window
     - light.dressing_room_window
     - light.deconz_kitchen_table_window

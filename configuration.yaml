@@ -7,6 +7,8 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customize.yaml
 
+ssdp:
+
 frontend:
 
 config:
@@ -19,6 +21,8 @@ http:
   trusted_proxies: !secret trusted_proxies
   ip_ban_enabled: True
   login_attempts_threshold: 3
+
+smartir:
 
 updater:
 
@@ -87,3 +91,4 @@ notify: !include notify.yaml
 script: !include scripts.yaml
 timer: !include timer.yaml
 input_boolean: !include input_boolean.yaml
+climate: !include climate.yaml

@@ -1,0 +1,17 @@
+- platform: smartir
+  name: Hallway master bedroom HVAC
+  unique_id: hallway_master_bedroom_hvac
+  device_code: 1021
+  controller_data: 10.0.60.35
+  temperature_sensor: sensor.temperature_xiaomi_temp_hum_03
+  humidity_sensor: sensor.humidity_xiaomi_temp_hum_03
+  #power_sensor: binary_sensor.ac_power
+
+- platform: smartir
+  name: Dressing room HVAC
+  unique_id: dressing_room_hvac
+  device_code: 1021
+  controller_data: 10.0.60.37
+  temperature_sensor: sensor.temperature_xiaomi_temp_hum_02
+  humidity_sensor: sensor.humidity_xiaomi_temp_hum_02
+  #power_sensor: binary_sensor.ac_power

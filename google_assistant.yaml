@@ -34,7 +34,7 @@ entity_config:
   light.kitchen_counter_shelf:
     name: Köksbänk hylla
     room: Kök
-  light.kitchen_counter_window:
+  switch.sonoff_05_relay:
     name: Köksbänk fönster
     room: Kök
   light.mira_makeup_table:
@@ -75,7 +75,7 @@ entity_config:
   light.office_window:
     name: Fönster
     room: Kontor
-  light.master_bedroom_window:
+  switch.sonoff_01_relay:
     name: Fönster
     room: Sovrum
   switch.car_heater:

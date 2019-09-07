@@ -10,18 +10,10 @@ light.deconz_hallway_bathroom_ceiling_fittings:
   friendly_name: Hall badrum - Tak
 light.deconz_kitchen_ceiling_fitting:
   friendly_name: Kök - Tak
-light.living_room_shelf:
-  friendly_name: Vardagsrum - Hylla
-light.kitchen_island:
-  friendly_name: Köksö
-light.living_room_window_ledge:
-  friendly_name: Vardagsrum - Fönsterbänk
 light.kitchen_window:
   friendly_name: Kök - Fönster
 light.kitchen_counter_shelf:
   friendly_name: Köksbänk - Hylla
-light.kitchen_counter_window:
-  friendly_name: Köksbänk - Fönster
 light.office_window:
   friendly_name: Kontor - Fönster
 light.rio_window:
@@ -30,7 +22,7 @@ light.kitchen_table_shelf:
   friendly_name: Köksbord - Hylla
 light.sofa_aquarium:
   friendly_name: Soffa - Akvarium
-light.master_bedroom_window:
+switch.sonoff_01_relay:
   friendly_name: Sovrum - Fönster
 light.mira_window:
   friendly_name: Mira - Fönster
@@ -60,16 +52,6 @@ switch.car_charger:
   friendly_name: Billaddare
 switch.kitchen_table_fan:
   friendly_name: Fläkt kamin
-sensor.kitchen_temperature:
-  friendly_name: Kök
-sensor.outdoor_north_temperature:
-  friendly_name: Utomhus
-sensor.temperature_garage_freezer:
-  friendly_name: Frys garage
-sensor.temperature_kitchen_left_freezer:
-  friendly_name: Frys kök vänster
-sensor.freezer_kitchen_right_temperature:
-  friendly_name: Frys kök höger
 light.tradfri_bulb_e27_opal_1000lm:
   hidden: true
 light.tradfri_bulb_e27_opal_1000lm_2:
