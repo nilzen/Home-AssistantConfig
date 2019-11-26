@@ -7,14 +7,7 @@ homeassistant:
   time_zone: Europe/Stockholm
   customize: !include customize.yaml
 
-ssdp:
-
-frontend:
-
-config:
-
-ios:
-
+default_config:
 http:
   base_url: !secret base_url
   use_x_forwarded_for: True
@@ -24,13 +17,7 @@ http:
 
 smartir:
 
-updater:
-
 conversation:
-
-history:
-
-logbook:
 
 recorder:
   purge_interval: 2
@@ -51,11 +38,7 @@ logger:
   #   rfxtrx: debug
   #   homeassistant.components.rfxtrx: debug
 
-system_health:
-
 speedtestdotnet:
-
-sun:
 
 tts:
   - platform: google_translate
