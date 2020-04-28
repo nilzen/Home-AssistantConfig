@@ -61,7 +61,7 @@ vacuum:
     host: !secret xiaomi_miio_ip
     token: !secret xiaomi_miio_token
 
-google_assistant: !include google_assistant.yaml
+#google_assistant: !include google_assistant.yaml
 switch: !include switches.yaml
 light: !include lights.yaml
 media_player: !include media_players.yaml

@@ -11,3 +11,4 @@ known_devices.yaml
 phue.conf
 ip_bans.yaml
 ._hass.code-workspace
+.cloud
