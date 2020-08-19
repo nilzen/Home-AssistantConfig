@@ -1,9 +1,5 @@
 - platform: yr
-- platform: rfxtrx
-  automatic_add: False
-  devices:
-    0850079bd400009759:
-      name: outdoor_north
+
 - platform: travisci
   api_key: !secret travisci_api_key
   monitored_conditions:

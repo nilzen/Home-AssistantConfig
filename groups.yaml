@@ -1,35 +1,5 @@
-default_view:
-  name: Start
-  view: yes
-  entities:
-    - group.kitchen
-    - sensor.kitchen_temperature
-    - sensor.outdoor_north_temperature
-    - group.common_outdoor
-
-all_lights_view:
-  name: Alla lampor
-  view: yes
-  entities:
-    - group.all_lights_group
-
-sensors_view:
-  name: Sensorer
-  view: yes
-  entities:
-    - group.speedtest
-
-speedtest:
-  name: Speedtest
-  view: no
-  entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
-
 all_lights_group:
   name: Alla lampor
-  view: no
   entities:
     - light.deconz_kitchen_table
     - light.deconz_living_room_window
@@ -61,30 +31,24 @@ all_lights_group:
 
 kitchen:
   name: Kök
-  view: no
-  control: hidden
   entities:
     - light.deconz_kitchen_table
     - switch.kitchen_table_fan
 
 common_outdoor:
   name: Utomhus
-  view: no
-  control: hidden
   entities:
     - switch.car_heater
     - switch.car_charger
 
 aquarium_lights:
   name: Akvarium
-  view: no
   entities:
     - light.sofa_aquarium
     - light.rio_aquarium
 
 window_lights:
   name: Fönsterbelysning
-  view: no
   entities:
     - light.kitchen_window
     - switch.sonoff_05_relay

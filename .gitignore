@@ -12,3 +12,4 @@ phue.conf
 ip_bans.yaml
 ._hass.code-workspace
 .cloud
+__pycache__

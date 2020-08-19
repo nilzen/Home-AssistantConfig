@@ -47,6 +47,60 @@ tts:
 
 rfxtrx:
   device: /dev/ttyUSB-RFXCOM
+  devices:
+    # kitchen_window
+    0b11000530bc0cfe03010f70:
+
+    # kitchen_counter_shelf
+    0b11000530bc0cfe02010f70:
+
+    # office_window
+    0b11000503bc0cfe01010f70:
+
+    # mira_window
+    0b1100051a8678fe07010f70:
+
+    # mira_makeup_table
+    0b11000530bc0cfe05010f70:
+
+    # mira_bed
+    0b11000564bc0cfe09010f70:
+
+    # kitchen_table_shelf
+    0b11000577bc0cfe02010f70:
+
+    # sofa_aquarium
+    0b11000577bc0cfe03010f70:
+
+    # rio_window
+    0b11000532bc0cfe06010f70:
+
+    # rio_aquarium
+    0b11000504bc0cfe01010f70:
+
+    # dressing_room_window
+    0b1100051e8678fe03010f70:
+
+    # kitchen_table_cabinet
+    0b11000505bc0cfe01010f70:
+
+    # hall_window
+    0b11000552bc0cfe02010f70:
+
+    # hallway_shelf
+    0b1100051f8678fe09010f70:
+
+    # hall_bathroom_floor
+    0b110005258678fe09010f70:
+
+    # car_heater
+    0b1100051e8678fe01010f70:
+
+    # car_charger
+    0b11000567bc0cfe09010f70:
+
+    # kitchen_table_fan
+    0b11000542bc0cfe01010f70:
 
 google:
   client_id: !secret google_calendar_client_id
